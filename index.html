@@ -13,7 +13,7 @@
 
 <body id="home">
     <header class="header-cont">
-        <div class="navbar">
+        <div id="navbar" class="navbar top">
             <div class="logo">
                 <h1><span><i class="fas fa-book-open"></i> Edge</span> Ledger</h1>
             </div>
@@ -155,7 +155,56 @@
 
             </div>
         </section>
+        <section id="contact" class="flex-cont">
+            <div class="contact-left"></div>
+            <div class="contact-right flex-cont">
+                <h1>Request Callback</h1>
+                <form class="flex-cont">
+                    <input type="text" placeholder="Enter name" name="name">
+                    <input type="email" placeholder="Enter email" name="name">
+                    <input type="number" placeholder="Enter phone" name="name">
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+       
     </main>
+    <footer>
+        <div class="social-media">
+            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+
+        </div>
+        <p>Copyright &copy;Anish-EdgeLedger </p>
+    </footer>
+    <script>
+        let scrolled=false;
+        const navbar=document.getElementById('navbar');
+        window.onscroll=function()
+        {
+            if(window.pageYOffset>100)
+            {
+                navbar.classList.remove('top')
+                if(!scrolled){
+                    navbar.style.transform='translateY(-70px)'
+                }
+                setTimeout(()=>{
+                    navbar.style.transform='translateY(0px)';
+                    navbar.style.transition='all 0.5s'
+                    scrolled=true
+                    
+
+                },200)
+            }
+            else{
+                navbar.classList.add('top')
+                scrolled=false
+            }
+        }
+    </script>
+
 
 </body>
 

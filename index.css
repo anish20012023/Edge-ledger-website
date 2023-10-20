@@ -5,9 +5,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+    
+}
 
 body {
     font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+   
 }
 
 html {
@@ -303,7 +310,7 @@ html {
     background: url(images/home/blog.jpg) no-repeat center center/cover;
 }
 .blog-section-div2{
-    height: 64.5rem;border: 1px solid yellow;
+    height: 64.5rem;
 }
 .blog-section-emply{
     height: calc(64.5rem - 20rem);
@@ -328,4 +335,132 @@ html {
 .blog-section-emply div p{
     font-size: 1.5rem;
     font-weight: 300;
+}
+
+/* contact page css */
+
+#contact{
+    height: 45rem;
+    background-color: rgb(240, 240, 240);
+}
+#contact div{
+    width: 50%;
+    height: 100%;
+}
+
+.contact-left{
+    background: url("images/home/contact.jpg") no-repeat center center/cover;
+}
+.contact-right{
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 3rem;
+}
+.contact-right h1{
+    font-size: 3.5rem;
+    letter-spacing: .2rem;
+    font-weight: 300;
+
+}
+.contact-right form{
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+}
+form input{
+    width: 100%;
+    height: 3.5rem;
+    border: none;
+    border-radius: .5rem;
+    padding-left: 1rem;
+
+    
+
+}
+form input:focus{
+    outline-color: #248A3B;
+    
+}
+
+form button {
+    width: 100%;
+    height:3.5rem ;
+    border: none;
+    color: white;
+    cursor: pointer;
+     border-radius: .5rem;
+    background-color:#32ac4e;
+}
+
+/* footer css */
+footer{
+    height: 20rem;
+    background-color: #333;
+}
+.social-media{
+    text-align: center;
+    padding: 3rem;
+}
+.social-media a{
+   padding: 1rem;
+}
+.social-media a i{
+    font-size: 3rem;
+    color: white;
+}
+.social-media a i:hover{
+    color: #47ca66;
+}
+footer p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* blog page css */
+
+.blog-header{height: 30rem ;
+    background: url("images/home/blog.jpg") no-repeat center center/cover;
+}
+#blog-page{
+    height: 150rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+#blog-page img{
+    width: 100%;
+    height: 100%;
+
+    
+}
+#blog-page div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3.5rem;
+    gap: 2rem;
+}
+#blog-page div h3{
+    font-size: 3.5rem;
+    font-weight: 300;
+}
+#blog-page div p.posted {
+    font-size: 1.3rem;
+}
+#blog-page div p.blog-para{
+    
+    font-size: 1.6rem;
+   
+}
+#blog-page div a{
+width: max-content;
+background-color: #333;
+}
+
+/* navabr scroll function */
+.top{
+    background:transparent;
+transition: all .5s;
 }
